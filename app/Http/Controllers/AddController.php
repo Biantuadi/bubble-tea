@@ -6,7 +6,7 @@ use App\Models\item;
 use Illuminate\Http\Request;
 
 class AddController extends Controller
-{   
+{
     public function add(Request $request)
     {
         item::create([
@@ -27,7 +27,7 @@ class AddController extends Controller
 
 
 
-        
+
         return redirect('/test');
     }
 
@@ -40,5 +40,5 @@ class AddController extends Controller
         // return redirect()->route('panier');
     }
 
-    
+
 }
