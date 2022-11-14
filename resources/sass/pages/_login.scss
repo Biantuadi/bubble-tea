@@ -1,0 +1,76 @@
+
+div#loginFormContainer{
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 20px;
+    justify-items: center;
+    align-items: center;
+
+    height: 100vh;
+    overflow-y: auto;
+
+  }
+
+#formLogin{
+    border-radius: 50px;
+    box-shadow: 0 0 10px -2px rgba(0, 0, 0, 43%);
+    width: 460px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    z-index: 3;
+    background: #fff;
+    height: 35em;
+    padding-top: 10px;
+    text-align: center;
+    // visibility: hidden;
+    opacity: 1;
+    transition: visibility 0s, opacity 0.3s linear;
+    margin-top: 45px;
+    
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+#emailLabel, #passwordLabel, #nameLabel, #cofirmaPasswordLabel{
+    margin-top: 10px;
+    margin-bottom: 2px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+}
+
+#emailLabel, #nameLabel{
+    margin-left: -142px;
+}
+
+#passwordLabel{
+    margin-left: -107px;
+}
+
+#cofirmaPasswordLabel{
+    margin-left: -37px;
+}
+
+input{
+    // width: 300px;
+    // height: 40px;
+    // border-radius: 15px;
+    border: 1px solid #000;
+    padding-left: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+
+}

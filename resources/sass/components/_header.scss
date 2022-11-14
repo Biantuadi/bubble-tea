@@ -1,0 +1,87 @@
+header {
+  font-family: "Italianno", sans-serif;
+  display: flex;
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+  font-weight: 200;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  background-color: #fff;
+
+  img {
+    width: 80px;
+    height: 80px;
+    margin-left: 50px;
+  }
+
+}
+
+
+header.welcome {
+  h1 {
+    margin-left: 40%;
+    text-align: center;
+    font-size: 43px;
+
+  }
+
+}
+
+header.dashboard {
+  display: flex;
+  justify-content: space-evenly;
+
+  h1 {
+    text-align: center;
+    font-size: 43px;
+
+  }
+
+  img {
+    margin-left: 8px;
+    width: 45px;
+    height: 45px;
+  }
+
+  nav {
+    margin-left: 30px;
+    ul {
+      display: flex;
+      // align-items: center;
+      margin-top: 9px;
+    }
+
+    li {
+      list-style-type: none;
+      color: #000;
+    }
+    color: black;
+
+    i {
+      text-decoration: none;
+      font-size: 20px;
+      margin-left: 25px;
+      transition: all 0.1s ease-in-out;
+      border-radius: 50%;
+      padding: 10px;
+      cursor: pointer;
+      // color: #000;
+
+      // text-align: center;
+      &:hover {
+        color: #fff;
+        background: #000;
+      }
+    }
+  }
+
+  button{
+    margin: 0;
+    border: none;
+    background: transparent;
+    padding: 0;
+    color: #000;
+
+
+  }
+}
