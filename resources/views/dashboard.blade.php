@@ -1,30 +1,9 @@
-{{-- <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
-
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 bg-white border-b border-gray-200">
-                    You're logged in!
-                </div>
-            </div>
-        </div>
-    </div>
-</x-app-layout> --}}
-
-
-{{--                         --}}
 
 @extends('layouts.default')
 
 @section('main')
 {{-- ********* header ********* --}}
 @include('layouts.header')
-
 
 
 <main class="main_dashboard">
@@ -67,15 +46,16 @@
 
                 <p>{{$item->description}}</p>
 
-                {{-- creer un button qui ajoute l'item au panier --}}
-                <script>
-                    function panier(){
-                        event.preventDefault();
-                        console.log('panier');
-                    }
-                </script>
+                
 
-                <button class="btn_panier" onclick="panier()">Ajouter au panier</button>
+                <form action="{{ route('ajouter.panier') }}" method="POST">
+                    @csrf
+                    <input type="hidden" name="id" value="{{$item->id}}">
+                    <input type="hidden" name="name" value="{{$item->name}}">
+                    <input type="hidden" name="price" value="{{$item->price}}">
+                    <input type="hidden" name="imgUrl" value="{{$item->imgUrl}}">
+                <button type="submit" class="btn_panier">Ajouter au panier</button>
+                </form>
 
                     
             </div>

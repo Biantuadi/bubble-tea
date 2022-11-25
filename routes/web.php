@@ -5,6 +5,7 @@ use App\Models\item;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\AddController;
+use App\Http\Controllers\panierController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,8 +19,7 @@ use App\Http\Controllers\AddController;
 */
 
 
-Route::get('/test', [FrontController::class, 'test']); //afficher tous les articles
-Route::post('/add', [AddController::class, 'add'])->name('add'); //ajouter un article
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -30,6 +30,33 @@ Route::get('/dashboard', function () {
     $items = item::get();
 
   return view('dashboard')->with('items', $items)->with('user', $user);
+
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+Route::post('/panier/ajouter', [panierController::class, 'store'])->name('ajouter.panier');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ---------------- test ----------------
+
+Route::get('/test', [FrontController::class, 'test']); //afficher tous les articles
+Route::post('/add', [AddController::class, 'add'])->name('add'); //ajouter un article
